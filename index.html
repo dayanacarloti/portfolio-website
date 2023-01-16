@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang ="en" dir="ltr">
 <head>
+
+  <header>
+    <div class="container">
+      <div class="navtoggle" id="myNavtoggle">
+        <img class="logo" src="img/logo.svg" alt="Dayana Carlotti UX UI Designer" >|
+        <nav>
+
+          <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
@@ -714,10 +723,62 @@ This is an example of a SVG image wich is animated using keyframes.
         <a href="img/social-behance" target="_blank">
         </a>
   </footer>
+  <script src="js/jquery-3.6.3.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous">
+
+  var input = $("input");
+var containers = $(".container");
+var listItems = $(".list > li");
+
+var oldItems = $(".old-item");
+oldItems.remove(); // Remove all found elements from the page
+
+var greenItems = $(".green-item");
+greenItems.css("color", "green"); // Make the text color green
+
+var hideItems = $(".hide-item");
+hideItems.hide(); // Don't remove them, just hide them
+hideItems.show(); // Now show them again!
+
+var list = $("ul");
+var listItems = list.find("li");
+listItems.hide();
+
+// Or, you can do this all in one line!
+$("ul").find("li").hide();
+// Which is the same as...
+$("ul > li").hide();
+
+$("input[disabled]").parent().addClass("disabled-container");
+
+$(".button").on("click", function() {
+  alert("This button has been clicked!");
+});
+
+$(".button").on("click", function() {
+  $(this).hide();
+});
+
+$(".item").on("mouseover", function() {
+  $(this).parent().addClass("is-hovered");
+});
+$(".item").on("mouseout", function() {
+  $(this).parent().removeClass("is-hovered");
+});
+
+</script>
+
+
   <script>
     alert("Hi! Welcome to My Portfolio Site");
   </script>
   <script src="js/scripts.js"></script>
+
 
 </body>
 </html>
