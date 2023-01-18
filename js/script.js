@@ -22,3 +22,10 @@ function menuToggle() {
     x.className = 'navtoggle';
   }
 }
+
+(function ($) {
+  $('#hamburgerMenu').click(function (event) {
+    event.preventDefault();
+    $('#menu').toggleClass('menu-visible');
+  });
+})($);

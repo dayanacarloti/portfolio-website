@@ -375,3 +375,37 @@ main {
 .navtoggle.responsive li:last-child  {
   padding: 0 0 10px;
 }
+
+nav {
+  display: flex;
+}
+nav > ul {
+  list-style: none;
+  display: flex;
+}
+
+nav > ul > li {
+  padding: 5px;
+}
+
+.navtoggle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hamburger-menu-icon {
+  display: none;
+}
+
+/*  for smaller than 641px */
+@media only screen and (max-width: 640px) {
+  .hamburger-menu-icon {
+    display: block;
+  }
+  nav > ul {
+    display: none;
+  }
+  .menu-visible {
+    display: block;
+  }
+}
